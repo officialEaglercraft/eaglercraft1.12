@@ -10,21 +10,34 @@
             padding: 0;
             overflow: hidden;
         }
-        
+
         canvas {
             display: block;
             position: absolute;
             top: 0;
             left: 0;
             z-index: -1;
+            background-color: black;
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            z-index: 1;
         }
     </style>
 </head>
 <body>
     <canvas id="starfield"></canvas>
-    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white;">
-        <h1>Eaglercraft 1.12.2</h1>
-        <p>It will come out when it comes out, being worked on when the developers feel like it.</p>
+    <div class="content">
+        <h1>Eaglercraft 1.12.2 current developmental status</h1>
+        <p>This is a page to tell you the current developmental progress of Eaglercraft 1.12.2</p>
+      <h3>Current status:</h3>
+      <h5>It will be done when it is done the devlopers will only work on it when they want to; they are volunteers they are not you servant; so don't compain that it's not done yet; would you want to be preasured into doing something all the time that you just wanted to do for fun? </h5>
     </div>
 
     <script>
@@ -33,7 +46,7 @@
         const ctx = canvas.getContext('2d');
 
         let stars = [];
-        const numStars = 500;
+        const numStars = 50;
 
         function init() {
             for (let i = 0; i < numStars; i++) {
